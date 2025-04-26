@@ -32,6 +32,10 @@ const initializeGeminiAPI = () => {
 
 const geminiAPI = initializeGeminiAPI();
 
+app.get('/', (req,res)=>{
+  res.json({msg:"Hello"})
+})
+
 app.post("/api/generateContent", async (req, res) => {
   try {
     const { prompt, model = "gemini-2.0-flash" } = req.body;
