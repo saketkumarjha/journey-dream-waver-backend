@@ -4,12 +4,6 @@ const bodyParser = require("body-parser");
 const { GoogleGenAI } = require("@google/genai");
 const dotenv = require("dotenv");
 const cors = require("cors");
-// const generalChat = require("./controller/generalChat");
-// const streamingContent = require("./controller/streamingContent");
-// const travelSuggestions = require("./controller/travelSuggestions");
-// const photoCaption = require("./controller/photoCaption");
-// const healthAndSafety = require("./controller/healthAndSafety");
-// const travelEmergencyContacts = require("./controller/travelEmergencyContacts");
 // Load environment variables
 dotenv.config();
 
@@ -558,7 +552,7 @@ app.post("/api/getTravelEmergencyContacts", async (req, res) => {
                 *   Check the official tourism website for the city/country.
                 *   Ask your hotel's front desk or concierge.
                 *   Look in local guidebooks or maps designed for tourists.
-                *   Search online using a search engine or map app (like Google Maps) with the *specific* city/country name and terms like "emergency number [City/Country]" or "hospitals near me [City/Country]".
+*   Search online using a search engine or map app (like Google Maps) with the *specific* city/country name and terms like "emergency number [City/Country]" or "hospitals near me [City/Country]".
                 *   Look for official government or police websites for the area.
         *   "**Please tell me the [City/Country] you are in or plan to visit, and I will do my best to provide the specific information.**" (Reiterate the call to action)
     
@@ -612,7 +606,6 @@ app.post("/api/getTravelEmergencyContacts", async (req, res) => {
     });
   }
 });
-
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
